@@ -1,0 +1,74 @@
+.about{
+    text-align: center;
+    color: white;
+    transition: all 2s ease;
+    opacity: 0;
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in { /* con esta animacion, genero que todo el conten inicie con una opacidada y con una altura por encima de la que tiene por defecto. depus de que termine la animacion, vuelve a su estado natural*/
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.about h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 100%;
+    font-size: 90px;
+    margin-right: 35%;
+}
+
+
+.my-info img{
+    width:60%;
+    height: 80%;
+    overflow: hidden;
+    margin-left: 59%;
+    border-radius: 10px;
+}
+.my-info h1{
+    position: absolute;
+    margin-top: -40%;
+    margin-left: 20%;
+}
+
+.conten{
+    width: 50%;
+    text-align: left;
+    font-family: sans-serif;
+    position: absolute;
+    margin-top: -30%;
+    margin-left: 7%;
+    
+}
+.conten p{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .about h1{
+        font-size: 40px;
+        margin-left: 2%;
+    }
+.my-info img{
+    width:70%;
+    height: 100%;
+}
+.about{
+    margin-top: -40%;
+}
+
+.voler{
+
+    margin-top: -70%;
+}
+
+}

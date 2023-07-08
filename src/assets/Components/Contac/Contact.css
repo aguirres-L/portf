@@ -1,0 +1,149 @@
+
+
+form{
+    --form-ok-color:#06F80D;
+    --form-error-color:red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 8%;
+}
+
+form >*{  /* con la boca de pescado hago referencia a todos los hijo que pueda llegar a tener esta class  */
+    padding: 0.8rem; /* al colocarles un padding, la letra interna  de los input no estara tan pegada al input en si   */
+    margin: 1rem auto;  /* le doy un maring de un 1rem y auto*/
+    display: block;  /* le indico que se ejecute en forma de block osea que los input se posicionan uno encima del otro como una lista */
+    width: 50%;    /* le indico que el ancho va a ser de 100% */    
+    }
+    
+    form input,
+    form textarea{
+        font-size: 1rem;
+        font-family: sans-serif ;       /* Le coloc una tipografia de letra para todos los elementos del form */
+        background-color: rgba(53, 49, 49, 0.609)   ;
+        color: rgb(117, 7, 227);
+        border: 0px solid;
+    }
+    form input::placeholder,
+    form textarea::placeholder{
+        color: rgb(245, 243, 247);
+
+    }
+    
+    .inputs::placeholder{
+        color: red;
+    }
+    .form input[type="submit"]{
+        width: 40%;
+        font-weight: bold;
+        cursor: pointer;    /* al momento de posicionar el cursor en el btn , el cursor cambiara su forma */
+    }
+    
+  /*   .form  *::placeholder{  (*::placeholder , con esto indico que el color de aplicque a todos los elemtnos que esten en from o jon y que se les coloque un color en particular 
+        color: var(--second-color)
+    } */
+    
+    /*  validaciones sobre los colores a la hora de colocar la info sobre los input, osea se ponen verde o rojos */
+    
+    
+    .form [required]:valid{  /* con requier hago referncia a todos los input con requiere , y con la seudo clase valid, indico que a todo los requeries que sean true me las pontara de verda */
+        border: thin solid var(--form-ok-color);
+    }
+    .form [required]:invalid{ /* y por otro lado con invalid, hago referencia a todos los input que no se pudieron prosesar osae false */
+    border: thin solid var(--form-error-color);
+    }
+    
+    .form-error{ /* style para los futuros carteles de error*/
+        margin-top: -1rem;
+        font-size: 80%;
+        color: #232222;
+        background-color: var(--form-error-color);
+        transition: all 800ms ease;
+        font-size: 1rem;
+    }
+     .none{
+        display: none;
+    }
+    
+    .jon-concat{
+        font-size: larger; /* le doy un font-size */
+        font-weight: 100;  /* coloco las letras en negritas */
+        text-align: center; /* alineo el texto de forma central */
+        margin-left: 40%;
+        
+    } 
+    
+    
+    
+.enlaces{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.git {
+    width: 120px;
+    height: 120px;
+    transition:all .3s ease;
+}
+.git:hover {
+    width: 125px;
+    height: 125px;
+    transition:all .3s ease;
+}
+
+
+.link{
+    width: 100px;
+    height: 100px;
+    transition:all .3s ease;
+    
+}
+.link:hover{
+    width: 105px;
+    height: 105px;
+    transition:all .3s ease;
+}
+
+
+
+
+.my-red{
+    margin-left: 42%;
+}
+.my-red a{
+    margin: 2%;
+}
+
+.texArea{
+    resize:none
+    
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+
+
+    .git{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .link{
+        height: 80px;
+        width: 80px;
+    }
+    .my-red{
+        margin-left: 30%;
+    }
+    .my-red a{
+        margin: 2%;
+    }
+    
+    form{
+        margin-top: -30%;
+    }
+    
+    }
